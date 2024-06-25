@@ -1,0 +1,865 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #00252B;
+}
+
+/* Timeline Slider CSS */
+.ic-double-slider {
+    width: 87%;
+    margin: 0 auto;
+  }
+
+  .slider-container {
+    position: relative;
+    /* 		width: 80%;
+        margin: 0 auto; */
+  }
+
+  .slider-one {
+    padding-bottom: 3.01vw;
+  }
+
+  .slide p {
+    font-family: "PP Fragment";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 5.79vw;
+    line-height: 0.9em;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+    margin: 0.58vw 0 0 0;
+  }
+
+  .slide.slick-active.slick-current {
+    text-align: left;
+  }
+
+  .slide.slick-active.slick-current p {
+    padding-left: 0.87vw;
+    padding-right: 0;
+  }
+
+  .slide.slick-active {
+    text-align: right;
+  }
+
+  .slide.slick-active p {
+    padding-right: 0.87vw;
+  }
+
+  .slider-two {
+    margin-top: -0.87vw;
+  }
+
+  .slider-two .slider-four-columns .four-column-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3.48vw;
+    flex-wrap: wrap;
+  }
+
+  .slider-two .slider-four-columns .four-column-content .column-content {
+    padding-top: 2.9vw;
+    position: relative;
+  }
+
+  .slider-two
+    .slider-four-columns
+    .four-column-content
+    .column-content
+    .orange-dot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00252b;
+    width: 1.57vw;
+    height: 1.57vw;
+  }
+
+  .slider-two
+    .slider-four-columns
+    .four-column-content
+    .column-content
+    .orange-dot
+    span {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ee6a40;
+    width: 0.35vw;
+    height: 0.35vw;
+    border-radius: 50%;
+  }
+
+  .slider-two
+    .slider-four-columns
+    .four-column-content
+    .column-content
+    .slider-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.58vw;
+    background-color: #00323b;
+    padding: 0.99vw 1.34vw;
+    width: 16.21vw;
+    height: fit-content;
+    position: relative;
+  }
+
+  .slider-two
+    .slider-four-columns
+    .four-column-content
+    .column-content
+    .slider-data::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 1.16vw solid transparent;
+    border-right: 1.16vw solid transparent;
+    border-bottom: 1.16vw solid #00323b;
+    position: absolute;
+    top: -0.87vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .slider-two
+    .slider-four-columns
+    .four-column-content
+    .column-content
+    .slider-data
+    .col-img {
+    display: flex;
+  }
+
+  .slider-two
+    .slider-four-columns
+    .four-column-content
+    .column-content
+    .slider-data
+    .col-img
+    img {
+    width: 100%;
+  }
+
+  .slider-two
+    .slider-four-columns
+    .four-column-content
+    .column-content
+    .slider-data
+    p {
+    font-family: "PP Fragment";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.39vw;
+    line-height: 1.42em;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .slider-two
+    .slider-four-columns
+    .four-column-content
+    .column-content
+    span {
+    font-family: "PP Fragment";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.05vw;
+    line-height: 1.5em;
+    text-align: center;
+    color: #ffffffcc;
+  }
+
+  .custom-prev,
+  .custom-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0.058vw solid #ffffff4d;
+    border-radius: 50%;
+    transition: all 0.5s;
+    width: 3.48vw;
+    height: 3.48vw;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .custom-prev {
+    left: -5.79vw;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .custom-next {
+    right: -5.79vw;
+  }
+
+  .custom-prev svg,
+  .custom-next svg {
+    width: 1.45vw;
+    height: 1.22vw;
+  }
+
+  .custom-prev:hover,
+  .custom-next:hover {
+    background-color: #ee6a40;
+    border: 0.06vw solid #ee6a40;
+  }
+
+  .ic-double-slider {
+    position: relative;
+  }
+
+  .progress-bar {
+    background-color: #ffffff21;
+  }
+
+  .progress-bar .progress {
+    width: 0; /* Set initial width to 0 */
+    height: 0.29vw;
+    background-color: #ee6a40; /* Change color of the progress bar */
+    transition: width 0.5s ease; /* Add transition for smooth width change */
+  }
+
+  #slider1 .four-column-content {
+    display: none;
+  }
+
+  .ic-timeline-section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ic-timeline-section::before {
+    content: "";
+    position: absolute;
+    width: 31.83vw;
+    height: 31.83vw;
+    left: unset;
+    top: -20.26vw;
+    right: -14.47vw;
+    bottom: unset;
+    background: #ee6a40;
+    opacity: 0.5;
+    filter: blur(8.95vw);
+  }
+
+  .ic-timeline-section::after {
+    content: "";
+    position: absolute;
+    width: 16.44vw;
+    height: 16.44vw;
+    bottom: -5.78vw;
+    left: -7.53vw;
+    right: unset;
+    top: unset;
+    background: #ee6a40;
+    opacity: 0.4;
+    filter: blur(4.62vw);
+  }
+
+  @media (max-width: 1440px) {
+    /* Timeline Slider CSS */
+    .slider-one {
+      padding-bottom: 3.62vw;
+    }
+
+    .slide p {
+      font-size: 5.91vw;
+      line-height: 0.95em;
+      margin: 0.7vw 0 0 0;
+    }
+
+    .slide.slick-active.slick-current p {
+      padding-left: 1.05vw;
+    }
+
+    .slide.slick-active p {
+      padding-right: 1.05vw;
+    }
+
+    .slider-two {
+      margin-top: -1.05vw;
+    }
+
+    .slider-two .slider-four-columns .four-column-content {
+      gap: 4.17vw;
+    }
+
+    .slider-two .slider-four-columns .four-column-content .column-content {
+      padding-top: 3.48vw;
+    }
+
+    .slider-two
+      .slider-four-columns
+      .four-column-content
+      .column-content
+      .orange-dot {
+      width: 1.875vw;
+      height: 1.875vw;
+    }
+
+    .slider-two
+      .slider-four-columns
+      .four-column-content
+      .column-content
+      .orange-dot
+      span {
+      width: 0.42vw;
+      height: 0.42vw;
+    }
+
+    .slider-two
+      .slider-four-columns
+      .four-column-content
+      .column-content
+      .slider-data {
+      gap: 0.7vw;
+      padding: 1.19vw 1.6vw;
+      width: 17vw;
+    }
+
+    .slider-two
+      .slider-four-columns
+      .four-column-content
+      .column-content
+      .slider-data::before {
+      border-left: 1.39vw solid transparent;
+      border-right: 1.39vw solid transparent;
+      border-bottom: 1.39vw solid #00323b;
+      top: -1.05vw;
+    }
+
+    .slider-two
+      .slider-four-columns
+      .four-column-content
+      .column-content
+      .slider-data
+      p {
+      font-size: 1.6vw;
+      line-height: 1.39em;
+    }
+
+    .slider-two
+      .slider-four-columns
+      .four-column-content
+      .column-content
+      span {
+      font-size: 1.05vw;
+      line-height: 1.66em;
+    }
+
+    .custom-prev,
+    .custom-next {
+      border: 0.07vw solid #ffffff4d;
+      width: 4.2vw;
+      height: 4.2vw;
+    }
+
+    .custom-prev {
+      left: -6.5vw;
+    }
+
+    .custom-next {
+      right: -6.5vw;
+    }
+
+    .custom-prev svg,
+    .custom-next svg {
+      width: 1.74vw;
+      height: 1.46vw;
+    }
+
+    .custom-prev:hover,
+    .custom-next:hover {
+      border: 0.07vw solid #ee6a40;
+    }
+
+    .progress-bar .progress {
+      height: 0.35vw;
+    }
+
+    .ic-timeline-section::before {
+      width: 38.2vw;
+      height: 38.2vw;
+      top: -24.31vw;
+      right: -17.36vw;
+      filter: blur(10.73vw);
+    }
+
+    .ic-timeline-section::after {
+      width: 19.73vw;
+      height: 19.73vw;
+      bottom: -6.95vw;
+      left: -9.03vw;
+      filter: blur(5.54vw);
+    }
+  }
+
+  @media (max-width: 1280px) {
+    /* Timeline Slider CSS */
+    .slider-one {
+      padding-bottom: 3.52vw;
+    }
+
+    .slide p {
+      font-size: 5.5vw;
+      line-height: 1em;
+      margin: 0.8vw 0 0 0;
+    }
+
+    .slide.slick-active.slick-current p {
+      padding-left: 1.2vw;
+    }
+
+    .slide.slick-active p {
+      padding-right: 1.2vw;
+    }
+
+    .slider-two {
+      margin-top: -1.2vw;
+    }
+
+    .slider-two .slider-four-columns .four-column-content {
+      gap: 3.91vw;
+    }
+
+    .slider-two .slider-four-columns .four-column-content .column-content {
+      padding-top: 3.91vw;
+    }
+
+    .slider-two
+      .slider-four-columns
+      .four-column-content
+      .column-content
+      .orange-dot {
+      width: 1.95vw;
+      height: 1.95vw;
+    }
+
+    .slider-two
+      .slider-four-columns
+      .four-column-content
+      .column-content
+      .orange-dot
+      span {
+      width: 0.4vw;
+      height: 0.4vw;
+    }
+
+    .slider-two
+      .slider-four-columns
+      .four-column-content
+      .column-content
+      .slider-data {
+      gap: 0.78vw;
+      padding: 1.33vw 1.56vw;
+      width: 17vw;
+    }
+
+    .slider-two
+      .slider-four-columns
+      .four-column-content
+      .column-content
+      .slider-data::before {
+      border-left: 1.56vw solid transparent;
+      border-right: 1.56vw solid transparent;
+      border-bottom: 1.56vw solid #00323b;
+      top: -1.18vw;
+    }
+
+    .slider-two
+      .slider-four-columns
+      .four-column-content
+      .column-content
+      .slider-data
+      p {
+      font-size: 1.65vw;
+      line-height: 1.4em;
+    }
+
+    .slider-two
+      .slider-four-columns
+      .four-column-content
+      .column-content
+      span {
+      font-size: 1.1vw;
+      line-height: 1.4em;
+    }
+
+    .custom-prev,
+    .custom-next {
+      border: 0.08vw solid #ffffff4d;
+      width: 3.9vw;
+      height: 3.9vw;
+    }
+
+    .custom-prev {
+      left: -6vw;
+    }
+
+    .custom-next {
+      right: -6vw;
+    }
+
+    .custom-prev svg,
+    .custom-next svg {
+      width: 1.95vw;
+      height: 1.65vw;
+    }
+
+    .custom-prev:hover,
+    .custom-next:hover {
+      border: 0.08vw solid #ee6a40;
+    }
+
+    .progress-bar .progress {
+      height: 0.4vw;
+    }
+
+    .ic-timeline-section::before {
+      width: 42.3vw;
+      height: 42.3vw;
+      top: -27.35vw;
+      right: -19.53vw;
+      filter: blur(12.07vw);
+    }
+
+    .ic-timeline-section::after {
+      width: 22.2vw;
+      height: 22.2vw;
+      bottom: -7.82vw;
+      left: -10.16vw;
+      filter: blur(6.24vw);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    /* Timeline Slider CSS */
+    .slider-one {
+      padding-bottom: 30px;
+    }
+
+    .slide p {
+      font-size: 60px;
+      line-height: 60px;
+      margin: 10px 0 0 0;
+    }
+
+    .slide.slick-active.slick-current p {
+      padding-left: 15px;
+    }
+
+    .slide.slick-active p {
+      padding-right: 15px;
+    }
+
+    .slider-two {
+      margin-top: -15px;
+    }
+
+    .slider-two .slider-four-columns .four-column-content {
+      gap: 40px;
+    }
+
+    .slider-two .slider-four-columns .four-column-content .column-content {
+      padding-top: 35px;
+    }
+
+    .slider-two
+      .slider-four-columns
+      .four-column-content
+      .column-content
+      .orange-dot {
+      width: 20px;
+      height: 20px;
+    }
+
+    .slider-two
+      .slider-four-columns
+      .four-column-content
+      .column-content
+      .orange-dot
+      span {
+      width: 5px;
+      height: 5px;
+      top: 60%;
+    }
+
+    .slider-two
+      .slider-four-columns
+      .four-column-content
+      .column-content
+      .slider-data {
+      gap: 10px;
+      padding: 15px;
+      width: 175px;
+    }
+
+    .slider-two
+      .slider-four-columns
+      .four-column-content
+      .column-content
+      .slider-data::before {
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 20px solid #00323b;
+      top: -15px;
+    }
+
+    .slider-two
+      .slider-four-columns
+      .four-column-content
+      .column-content
+      .slider-data
+      p {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    .slider-two
+      .slider-four-columns
+      .four-column-content
+      .column-content
+      span {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .custom-prev,
+    .custom-next {
+      border: 1px solid #ffffff4d;
+      width: 40px;
+      height: 40px;
+    }
+
+    .custom-prev {
+      left: -60px;
+    }
+
+    .custom-next {
+      right: -60px;
+    }
+
+    .custom-prev svg,
+    .custom-next svg {
+      width: 25px;
+      height: 20px;
+    }
+
+    .custom-prev:hover,
+    .custom-next:hover {
+      border: 1px solid #ee6a40;
+    }
+
+    .progress-bar .progress {
+      height: 5px;
+    }
+
+    .ic-timeline-section::before {
+      width: 500px;
+      height: 500px;
+      top: -350px;
+      right: -250px;
+      filter: blur(154.494px);
+    }
+
+    .ic-timeline-section::after {
+      width: 270px;
+      height: 270px;
+      bottom: -100px;
+      left: -130px;
+      filter: blur(79.7753px);
+    }
+  }
+
+  @media (max-width: 880px) {
+    /* Timeline Slider CSS */
+    .slide p {
+      font-size: 55px;
+      line-height: 55px;
+      margin: 10px 0 0 0;
+      padding: 0;
+    }
+
+    .slide.slick-active.slick-current p {
+      padding-left: 0;
+    }
+
+    #slider2 {
+      display: none;
+    }
+
+    #slider1 .four-column-content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .slide {
+      display: flex !important;
+      justify-content: space-between;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .slider-one .four-column-content .column-content .slider-data {
+      background-color: #00323b;
+      height: fit-content;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px;
+      width: 330px;
+    }
+
+    .slider-one .four-column-content .column-content .slider-data p {
+      font-size: 19px;
+      line-height: 27px;
+      margin: 0;
+      padding: 0;
+      font-family: "PP Fragment";
+      font-style: normal;
+      font-weight: 300;
+      text-align: center;
+      letter-spacing: -0.01em;
+    }
+
+    .slider-one .four-column-content .column-content span {
+      font-size: 14px;
+      line-height: 20px;
+      font-family: "PP Fragment";
+      font-style: normal;
+      font-weight: 400;
+      text-align: center;
+      color: #ffffffcc;
+    }
+
+    .custom-prev,
+    .custom-next {
+      width: 35px;
+      height: 35px;
+    }
+
+    .custom-prev {
+      left: -50px;
+    }
+
+    .custom-next {
+      right: -50px;
+    }
+
+    .custom-prev svg,
+    .custom-next svg {
+      width: 23px;
+      height: 17px;
+    }
+
+    .slider-one .four-column-content .column-content .slider-data .col-img {
+      display: flex;
+      justify-content: center;
+    }
+
+    .slider-one {
+      padding-bottom: 40px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    /* Timeline Slider CSS */
+    .slide p {
+      font-size: 46px;
+      line-height: 46px;
+      margin: 0;
+    }
+
+    .slider-one .four-column-content .column-content .slider-data {
+      gap: 10px;
+      padding: 15px;
+      width: 100%;
+    }
+
+    .slider-one .four-column-content .column-content .slider-data p {
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    .slider-one
+      .four-column-content
+      .column-content
+      .slider-data
+      .col-img
+      img {
+      width: 100%;
+    }
+
+    .ic-double-slider {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 27px 10px;
+    }
+
+    .custom-prev {
+      position: static;
+      transform: rotate(180deg);
+      order: 3;
+    }
+
+    .custom-next {
+      position: static;
+      transform: unset;
+      order: 4;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 100%;
+      order: 1;
+    }
+
+    .slide {
+      gap: 20px;
+    }
+
+    #slider1 .four-column-content {
+      gap: 20px;
+    }
+
+    .ic-timeline-section::before {
+      width: 450px;
+      height: 450px;
+      top: -250px;
+      right: -300px;
+    }
+
+    .ic-timeline-section::after {
+      width: 250px;
+      height: 250px;
+    }
+  }
