@@ -15,7 +15,7 @@
 <p>Navigate to your WordPress custom child theme  Add the folder and the functions.php file, then include the code require_once('custom-elementor-widgets/my-widgets.php').</p>
 <h6>3.Add the Widget to Elementor:</h6>
 <ul><li>Open a page or post with Elementor.</li>
-  <li>Find the "Elementor Testimonial Widget" in the Elementor widget panel and drag it onto your page.</li>
+  <li>Find the "Timeline by IC" in the Elementor widget panel and drag it onto your page.</li>
 </ul>
 
 
